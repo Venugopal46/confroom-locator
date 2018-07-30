@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meeting Rooms</title>
+    <meta name="description" content="Find your meeting rooms quickly">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type= "text/css" href= "src/css/normalize.css">
+    <link rel="stylesheet" type= "text/css" href= "src/css/hamburger.css">
+    <link rel="stylesheet" type= "text/css" href= "src/css/nav.css">
+    <link rel="stylesheet" type= "text/css" href= "src/css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div id="hamburger">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+      <span class="appname">Meeting Room Locator</span>
+    </header>
+    <nav id="navigation">
+      <div class="building">
+        <p>AURA</p>
+        <a data-floor="aura4" data-name="Aura 4th Floor" data-box="2210 682">4th Floor</a>
+        <a data-floor="aura5" data-name="Aura 5th Floor" data-box="2210 682">5th Floor</a>
+        <a data-floor="aura6" data-name="Aura 6th Floor" data-box="2210 682">6th Floor</a>
+      </div>
+      <div class="building">
+        <p>Hallmark</p>
+        <a data-floor="hallmark1" data-name="Hallmark I" data-box="2048 606">Hallmark - I</a>
+        <a data-floor="hallmark2" data-name="Hallmark II" data-box="1400 680">Hallmark - II</a>
+      </div>
+      <div class="building">
+        <p>Touchstone</p>
+        <a data-floor="touchstone3" data-name="Touchstone 3rd Floor" data-box="4239 886">3rd Floor</a>
+      </div>
+    </nav>
+    <main>
+      <h1 id="page-header"></h1>
+      <div class="container">
+        <div class="content">
+          <div class="find-seat">
+            <input type="text" id="seatno" list="datalist" placeholder="Search seat">
+            <datalist id="datalist"></datalist>
+            <button type="button" class="button" onclick="findseat('seatno')">Find</button>
+          </div>
+          <div class="list-of-rooms">
+            <ul id="list-of-rooms"></ul>
+          </div>
+        </div>
+        <div class="floor-map">
+          <svg viewBox="0 0 2210 682" id="svgmap">
+            <g id="svg-floor" stroke="#000" stroke-width="1" fill="none"></g>
+          </svg>
+        </div>
+      </div>
+      <div id="emp-details">
+        <span class="close"></span>
+        <p>Seat no: <span id="emp-seat"></span></p>
+        <p>Name: <span id="emp-name"></span></p>
+      </div>
+      <div id="not-found">
+        <span class="close"></span>
+        <p>Not found</p>
+      </div>
+    </main>
+    <footer class="footer">
+      <span>Send <a href="mailto:venugopal.pikkala@walmart.com">feedback</a></span>
+    </footer>
+    <script type="text/javascript" src="src/js/main.js"></script>
+  </body>
+</html>

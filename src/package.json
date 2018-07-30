@@ -1,0 +1,18 @@
+{
+  "name": "confroom-locator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 9080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gecgithub01.walmart.com:vpikkal/confroom-locator.git"
+  },
+  "author": "Venugopal Pikkala(venugopal.pikkala@walmart.com)",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}

@@ -1,0 +1,270 @@
+@font-face {
+  font-family: 'Sansita';
+  src:  url('fonts/Sansita-Regular.ttf') format('truetype');
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 30px;
+  min-height: 100%;
+  font-family: 'Sansita', sans-serif;
+}
+body input, body button {
+  font-family: 'Sansita';
+  font-size: 14px;
+}
+.header {
+  height: 50px;
+  padding: 10px 15px;
+  background: #007bc9;
+  display: flex;
+  align-items: center;
+}
+.header .logo {
+  height: 30px;
+}
+.appname {
+  color: white;
+  line-height: 25px;
+  font-size: 20px;
+}
+#page-header {
+  font-size: 18px;
+  margin: 15px 15px 3px;
+  color: #424242;
+}
+.container {
+  padding: 15px;
+}
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #2a4b60;
+  text-align: right;
+  padding: 8px 15px;
+  z-index: 100;
+}
+.footer span, .footer a, .footer a:hover, .footer a:focus {
+  font-size: 12px;
+  color: white;
+}
+.meet-room, .seat {
+  pointer-events: visible;
+  cursor: pointer;
+}
+path.on {
+  fill: #007dc6;
+}
+#emp-details, #not-found {
+  visibility: hidden;
+  position: fixed;
+  top: 5px;
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  right: -250px;
+  transition: all 200ms ease-in-out;
+}
+p {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+#emp-details .close, #not-found .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #666;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close:before {
+  content: 'x';
+  position: relative;
+  top: -2px;
+  left: 4px;
+  font-size: 14px;
+  color: #666;
+}
+#emp-details.on, #not-found.on {
+  visibility: visible;
+  right: 5px;
+}
+.meeting, .call, .oneonone, .interview {
+  fill: #fafad2;
+}
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+input[type="radio"] {
+  display: none;
+}
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 10px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+  font-size: 14px;
+}
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+#seatno, .button {
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.content input {
+  width: calc(100% - 60px);
+}
+.content button {
+  margin-left: 5px;
+  width: 50px;
+}
+.list-of-rooms ul {
+  padding: 0;
+  list-style: none;
+  columns: 150px auto;
+  column-gap: 8px;
+}
+.list-of-rooms li {
+  padding: 5px 10px 5px 20px;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  position: relative;
+  text-transform: capitalize;
+}
+.list-of-rooms li:hover, .list-of-rooms li:focus {
+  background: #eee;
+}
+.list-of-rooms li.on {
+  background: #007dc6;
+  color: white;
+}
+.tv-projector:before {
+    content: url('../images/monitor.svg');
+    width: 12px;
+    display: inline-block;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    margin-top: -5px;
+}
+@media only screen and (max-width: 768px) {
+  .tv-projector:before {
+    width: 10px;
+  }
+  .list-of-rooms ul {
+    columns: 132px auto;
+  }
+  .list-of-rooms li {
+    font-size: 12px;
+  }
+  label {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .appname {
+    font-size: 18px;
+  }
+  #page-header {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+  }
+  .content {
+    padding: 0 15px;
+    width: 250px;
+    order: 2;
+  }
+  .list-of-rooms {
+    margin-top: 20px;
+    overflow: auto;
+  }
+  .floor-map {
+    width: calc(100% - 250px);
+  }
+}
+.rotate-60 {
+  transform: rotateZ(-60deg);
+  -moz-transform: rotateZ(-60deg);
+}
+.rotate60 {
+  transform: rotateZ(60deg);
+  -moz-transform: rotateZ(60deg);
+}
+.rotate90 {
+  transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+}
+.rotate-180 {
+  transform: rotateZ(-180deg);
+  -moz-transform: rotateZ(-180deg);
+}
+.rotate-90 {
+  transform: rotateZ(-90deg);
+  -moz-transform: rotateZ(-90deg);
+}
+.rotate180 {
+  transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+}
+.rotate120 {
+  transform: rotateZ(120deg);
+  -moz-transform: rotateZ(120deg);
+}
+.rotate-120 {
+  transform: rotateZ(-120deg);
+  -moz-transform: rotateZ(-120deg);
+}
+.rotatex-15 {
+  transform: translateX(-15px);
+  -moz-transform: translateX(-15px);
+}
+.rotatey30 {
+  transform: translateY(30px);
+  -moz-transform: translateY(30px);
+}
+.rotatex-30 {
+  transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+}
+.rotatey15 {
+  transform: translateY(15px);
+  -moz-transform: translateY(15px);
+}
